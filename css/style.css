@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.logo img{
+    width: 65%;
+    translate: 0 10px;
+}
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -20,7 +25,7 @@ main{
 
 .sidebar{
     background-color: black;
-    width: 230px;
+    width: 260px;
     height:100vh;
     position: fixed;
     left: 0;
@@ -45,7 +50,7 @@ header{
     justify-content: flex-end;
     position: fixed;
     top: 0;
-    left: 230px;
+    left: 260px;
     z-index: 1;
     
 }
@@ -64,27 +69,36 @@ footer{
 
 .sidebar-contain{
     background-color:coral ;
-    width: calc(100% - 30px);
+    width: calc(100% - 40px);
     height: 100%;
-    margin: 15px;
+    margin: 15px 20px;
 }
 
 .logo{
-    background-color: green;
     width: 100%;
-    height: 85px;
+    padding-bottom: 30px;
 }
 
 .menù{
     background-color: cadetblue;
     width: 100%;
-    height: 95px;
+}
+
+.menù img{
+    width: 15%;
 }
 
 .playlist{
     background-color: blueviolet;
     width: 100%;
-    height: 150px;
+}
+
+.playlist h4{
+    padding: 25px 0 10px;
+}
+
+.playlist ul li{
+    padding: 7px 0;
 }
 
 .f-row{
@@ -116,15 +130,24 @@ footer{
 }
 
 .container-song{
-    width: calc(100% - 250px);
+    width: calc(100% - 290px);
     height: calc(100% - 200px); 
-    margin: 100px 250px 0;
+    margin: 100px 290px 0;
 }
 
 .top-row{
     background-color: darkred;
     width: 100%;
     height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.under-header-col{
+    height: 20px;
+    margin: 0 10px;
 }
 
 .row{
@@ -150,8 +173,15 @@ footer{
 .col{
     margin: 10px 15px 0 0;
     background-color: olive;
-    width: 250px;
+}
+
+.col img{
+    width: 200px;
     height: 200px;
+}
+
+.radius img{
+    border-radius: 50%;
 }
 
 
