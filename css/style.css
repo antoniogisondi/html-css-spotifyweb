@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* PRINCIPAL CONTAINER STYLE */
 .container{
     width: 100vw;
@@ -32,9 +36,11 @@ main{
 }
 
 .sidebar-contain{
-    background-color:coral ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: calc(100% - 40px);
-    height: 100%;
+    height: calc(100% - 115px);
     margin: 15px 20px;
 }
 
@@ -45,12 +51,15 @@ main{
 
 .logo img{
     width: 65%;
-    translate: 0 10px;
 }
 
 .menù{
-    background-color: cadetblue;
     width: 100%;
+}
+
+.menù ul li{
+    color: white;
+    list-style-type: none;
 }
 
 .menù ul li span{
@@ -64,7 +73,6 @@ main{
 }
 
 .playlist{
-    background-color: blueviolet;
     width: 100%;
     height: 20vh;
     overflow-y: auto;
@@ -72,10 +80,55 @@ main{
 
 .playlist h4{
     padding: 25px 0 10px;
+    color: white;
 }
 
 .playlist ul li{
     padding: 7px 0;
+    color: white;
+}
+
+.user{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-top{
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    
+}
+
+.user-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-top img{
+    width: 20px;
+}
+
+.user-top a{
+    color: rgba(100,100,100,255);
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.user-bottom h4{
+    color: white;
+    padding-left: 15px;
+}
+
+.user-icon img{
+    width: 20px;
 }
 /* END SIDEBAR STYLE */
 
@@ -123,7 +176,7 @@ header{
 
 .under-header-col{
     height: 20px;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .under-header-col span a{
@@ -141,6 +194,10 @@ header{
 .title-col{
     width: 100%;
     padding-bottom: 15px;
+}
+
+.title-col h2{
+    padding-bottom: 10px;
 }
 
 .container-col{
