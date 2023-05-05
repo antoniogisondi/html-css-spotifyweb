@@ -84,8 +84,15 @@ main{
 }
 
 .playlist ul li{
+    font-size: 13px;
     padding: 7px 0;
     color: white;
+    display: flex;
+    align-items: center;
+}
+
+.playlist ul li span i{
+    font-size: 50px;
 }
 
 .user{
@@ -136,7 +143,7 @@ main{
 .song-menù{
     background-color: rgba(20,25,34,255);
     width: 100vw;
-    height: 175vh;
+    height: 180vh;
     display: flex;
     flex-direction: column;
 }
@@ -280,18 +287,99 @@ footer{
 }
 
 .col-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width:25%;
-    background-color: crimson;
 }
 
 .col-center{
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    background-color: darkorange;
 }
 
 .col-right{
+    line-height: 80px;
     width: 25%;
     background-color: crimson;
+}
+
+.song-img{
+    width: 60px;
+    height: 60px;
+}
+
+.song-img img{
+    width: 100%;
+}
+
+.title-song{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 120px;
+    height: 60px;
+    margin: 0 15px;
+}
+
+.title-song h5{
+    color: white;
+}
+
+.title-song p{
+    color: rgba(122,122,122,255);
+    font-size: 12px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+.icons i{
+    color: rgba(122,122,122,255);
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.col-center-top{
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+.col-center-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.col-center-bottom input{
+    width: 75%;
+}
+
+.col-center-bottom span{
+    font-size: 12px;
+    align-self: center;
+    margin: 0 20px;
+    color: white;
+}
+
+.col-center-top i{
+    font-size: 20px;
+    margin: 0 10px;
+    color: white;
+}
+
+
+#play{
+    font-size: 30px;
+    margin: 0 15px;
+    color: white;
 }
 /* END FOOTER STYLE */
 

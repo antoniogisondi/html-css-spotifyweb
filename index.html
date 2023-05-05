@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +42,7 @@
                         <div class="playlist">
                             <h4>PLAYLIST</h4>
                             <ul>
-                                <li><span><img src="" alt=""></span>Crea Playlist</li>
+                                <li><span><i class="fa-solid fa-square-plus"></i></span>Crea Playlist</li>
                                 <li>Nome Playlist</li>
                                 <li>Nome Playlist</li>
                                 <li>Nome Playlist</li>
@@ -185,9 +186,37 @@
             <!-- FOOTER -->
             <footer>
                 <div class="f-row">
-                    <div class="col-left"></div>
-                    <div class="col-center"></div>
-                    <div class="col-right"></div>
+                    <div class="col-left">
+                        <div class="song-img">
+                            <img src="./img/sinister.jpeg" alt="sinister">
+                        </div>
+                        <div class="title-song">
+                            <h5>Sinister</h5>
+                            <p>Brano Nome</p>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-folder"></i>
+                        </div>
+                    </div>
+                    <div class="col-center">
+                        <div class="col-center-top">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <i class="fa-solid fa-backward-step"></i>
+                            <i id="play" class="fa-regular fa-circle-play"></i>
+                            <i class="fa-solid fa-backward-step fa-rotate-180"></i>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="col-center-bottom">
+                            <span>0:25</span><input type="range"><span>4:35</span>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-tv"></i>
+                        <i class="fa-solid fa-volume-high"></i>
+                        <input type="range">
+                    </div>
                 </div>
             </footer>
             <!-- END FOOTER -->
