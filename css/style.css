@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: rgba(20,25,34,255);
 }
 
 /* PRINCIPAL CONTAINER STYLE */
@@ -139,11 +140,8 @@ main{
 
 /* MENU' SONG STYLE */
 .song-menù{
-    background-color: rgba(20,25,34,255);
     width: 100vw;
     height: 180vh;
-    display: flex;
-    flex-direction: column;
 }
 
 header{
@@ -166,12 +164,11 @@ header{
 }
 
 .container-song{
-    width: calc(100% - 290px);
-    margin: 100px 290px 0;
+    width: calc(100% - 300px);
+    margin: 100px 280px 0;
 }
 
 .top-row{
-    width: 100%;
     padding: 10px 0 20px;
     display: flex;
     flex-direction: row;
@@ -180,11 +177,11 @@ header{
 }
 
 .under-header-col{
-    height: 20px;
     margin: 0 15px;
 }
 
 .under-header-col span a{
+    font-size: 15px;
     text-decoration: none;
     color: rgba(104,106,111,255);
 }
@@ -216,13 +213,16 @@ header{
 }
 
 .container-col{
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .col{
+    width: calc(100% / 6 - 10px);
     text-align: center;
-    margin: 10px 15px 0 0;
+    margin: 10px 5px ;
 }
 
 .col h4{
@@ -285,6 +285,14 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.img-hover .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.49);
+    display: none;
 }
 /* END MENU' SONG STYLE */
 
@@ -432,11 +440,29 @@ footer{
     color: white;
 }
 
-.img-hover i:hover{
+.img-hover:hover i{
     display: block;
 }
 
+.img-hover:hover .background{
+    display: block;
+}
 /* END HOVER EFFECTS */
+
+/* MEDIA QUERY (first desktop) */
+@media screen and (max-width:991px){
+    .container{
+        width: 100%;
+    }
+
+    .top-row{
+        flex-wrap: wrap;
+    }
+
+    .col{
+        width: calc(100% / 4 - 10px);
+    }
+}
 
 
 
