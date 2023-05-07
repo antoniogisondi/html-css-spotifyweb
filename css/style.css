@@ -141,8 +141,14 @@ main{
     padding-left: 15px;
 }
 
+.user-icon{
+    background-color: gray;
+    border-radius: 50%;
+}
+
 .user-icon img{
-    width: 20px;
+    width: 30px;
+    height: 25px;
 }
 /* END SIDEBAR STYLE */
 
@@ -167,6 +173,7 @@ header{
 .button{
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 0 270px;
     margin: 25px 0;
 }
@@ -314,16 +321,16 @@ footer{
     flex-direction: row;
     background-color: rgba(40,40,40,255);
     width: 100%;
-    height: 100px;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1;
 }
 
+
 .f-row{
     width: calc(100% - 20px);
-    margin: 10px 10px;
+    margin: 15px 10px;
     display: flex;
     flex-direction: row;
 }
@@ -342,32 +349,33 @@ footer{
 }
 
 .col-right{
+    object-fit: contain;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 25%;
+    
 }
 
 .col-right i{
-    margin: 5px;
+    font-size: 13px;
+    margin: 10px;
     color: white;
 }
 
-.song-img{
-    width: 60px;
-    height: 60px;
+.col-right input{
+    overflow: auto;
 }
 
 .song-img img{
-    width: 100%;
+    width: 60px;
+    height: 60px;
 }
 
 .title-song{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 120px;
-    height: 60px;
     margin: 0 15px;
 }
 
@@ -377,20 +385,19 @@ footer{
 
 .title-song p{
     color: rgba(122,122,122,255);
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .icons{
     display: flex;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    margin-left: 15px;
 }
 
 .icons i{
     color: rgba(122,122,122,255);
-    font-size: 20px;
-    margin: 0 5px;
+    font-size: 17px;
+    margin: 0 7px;
 }
 
 .col-center-top{
@@ -407,7 +414,7 @@ footer{
 }
 
 .col-center-bottom input{
-    width: 75%;
+    width: 50%;
 }
 
 .col-center-bottom span{
@@ -422,7 +429,6 @@ footer{
     margin: 0 10px;
     color: white;
 }
-
 
 #play{
     font-size: 30px;
@@ -462,13 +468,13 @@ footer{
 /* END HOVER EFFECTS */
 
 /* MEDIA QUERY (first desktop) */
-@media screen and (max-width:991px){
-    .container{
-        width: 100%;
-    }
-
+@media screen and (max-width:1200px){
     .top-row{
         flex-wrap: wrap;
+    }
+
+    .under-header-col{
+        width: calc(100% / 5 - 30px);
     }
 
     .col{
@@ -476,7 +482,16 @@ footer{
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:991px) {
+    .under-header-col{
+        width: calc(100% / 3 - 30px);
+        text-align: center;
+    }
+
+    .active::after{
+        margin-left: 40%;
+    }
+
     .col{
         width: calc(100% / 2 - 10px);
     }
@@ -484,9 +499,18 @@ footer{
     .icons{
         flex-wrap: wrap;
     }
+
+    .icons i{
+        padding-bottom: 5px;
+    }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
+    .under-header-col{
+        width: calc(100% / 4 - 30px);
+        text-align: center;
+    }
+
     .sidebar{
         width: 50px;
     }
@@ -542,10 +566,6 @@ footer{
         
     }
 
-    .media-user .user-bottom img{
-        width: 50%;
-    }
-
     .container-song{
         width: calc(100% - 70px);
         margin: 100px 70px 0;
@@ -554,6 +574,10 @@ footer{
     header{
         width: 100%;
         left: 50px;
+    }
+
+    .button{
+        padding: 0 60px;
     }
 }
 
