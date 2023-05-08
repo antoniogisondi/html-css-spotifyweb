@@ -34,7 +34,6 @@ main{
     left: 0;
     top: 0;
     z-index: 1;
-    /* border-left: 2px solid lime; */
 }
 
 .media-top{
@@ -100,16 +99,22 @@ main{
     align-items: center;
 }
 
-.playlist ul li:first-child{
-    font-size: 15px;
+.title{
+    display: flex;
+    align-items: center;
 }
 
-.playlist ul li span{
-    margin-right: 10px;
-}
-
-.playlist ul li span i{
+.title i{
     font-size: 50px;
+    color: white;
+    margin: 5px 0;
+    color: rgba(99,99,99,255);
+}
+
+.title span{
+    color: white;
+    margin-left: 10px;
+    color: rgba(99,99,99,255);
 }
 
 .user{
@@ -358,7 +363,6 @@ footer{
 }
 
 .col-right{
-    object-fit: contain;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -368,7 +372,7 @@ footer{
 
 .col-right i{
     font-size: 13px;
-    margin: 10px;
+    margin: 5px;
     color: white;
 }
 
@@ -394,7 +398,7 @@ footer{
 
 .title-song p{
     color: rgba(122,122,122,255);
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .icons{
@@ -447,7 +451,7 @@ footer{
 /* END FOOTER STYLE */
 
 /* HOVER EFFECTS */
-.menù ul li:hover, .playlist ul li:hover, .user-top a:hover{
+.menù ul li:hover, .playlist ul li:hover, .user-top a:hover, .title:hover i, .title:hover span{
     color: white;
 }
 
@@ -477,6 +481,7 @@ footer{
 /* END HOVER EFFECTS */
 
 /* MEDIA QUERY (first desktop) */
+/* DESKTOP */
 @media screen and (max-width:1200px){
     .top-row{
         flex-wrap: wrap;
@@ -491,6 +496,7 @@ footer{
     }
 }
 
+/* TABLET */
 @media screen and (max-width:991px) {
     .under-header-col{
         width: calc(100% / 3 - 30px);
@@ -514,6 +520,7 @@ footer{
     }
 }
 
+/* MOBILE */
 @media screen and (max-width:768px){
     .under-header-col{
         width: calc(100% / 4 - 30px);
@@ -592,6 +599,13 @@ footer{
     }
 }
 
+@media screen and (max-height:730px) {
+    .playlist ul{
+        height: 15vh;
+        overflow-y: auto;
+    }
+}
+/* END MEDIA QUERY */
 
 
 
